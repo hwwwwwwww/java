@@ -5,10 +5,15 @@ public class Asterisques {
 		Scanner entrée = new Scanner(System.in);
 		System.out.println("Valeur de n :");
 		int n = entrée.nextInt();
-		char c = '*';
-		for(int i = 0 ; i<n ;i++) {		
-			System.out.print(c);		
-		}		
+		for(int i = 0 ; i<n ;i++) {
+			for(int j=0; j<n ; j++) {
+				if(j<=i) {
+					System.out.print("*");			
+				  }						
+				}
+			System.out.println();
+			}	
 		entrée.close();
-	}
+		}
+
 }
