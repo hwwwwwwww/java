@@ -7,6 +7,9 @@ public class Point {
 		this.abscisse=abscisse;
 		this.ordonnée=ordonnée;
 	}
+	
+	public static final Point POINT_ORIGINE = new Point(0,0);
+	
 	public float getAbscisse() {
 		return this.abscisse;
 	}
