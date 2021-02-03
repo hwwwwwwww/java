@@ -1,7 +1,7 @@
 public class Rationnel {
 	private long numérateur;
 	private long dénominateur;
-	private static long pgcd(long a,long b) {
+	public static long pgcd(long a,long b) {
 		while(a != b) {
 			if(a<b) {
 				b -= a;
@@ -29,7 +29,7 @@ public class Rationnel {
 		return this.dénominateur;
 	}
 	
-	public Rationnel réduction (Rationnel r) {
+	public Rationnel réduction () {
 		return new Rationnel(this.numérateur/Rationnel.pgcd(this.numérateur, this.dénominateur)
 				,this.dénominateur/Rationnel.pgcd(this.numérateur,this.dénominateur));
 		
@@ -46,6 +46,7 @@ public class Rationnel {
 	
 	@Override
 	public String toString() {
-         return this.numérateur + "/" + this.dénominateur;
+		Rationnel r = new Rationnel(this.numérateur,this.dénominateur).réduction();
+         return r.numérateur + "/" + r.dénominateur;
 	}
 }
