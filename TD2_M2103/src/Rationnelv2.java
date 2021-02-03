@@ -1,6 +1,6 @@
 public class Rationnelv2 {
-	private int numérateur;
-	private int dénominateur;
+	private long numérateur;
+	private long dénominateur;
 	private static long pgcd(long a,long b) {
 		while(a != b) {
 			if(a<b) {
@@ -12,7 +12,7 @@ public class Rationnelv2 {
 		return a;
 	}
 
-	public Rationnelv2(int numérateur, int dénominateur) throws IllegalArgumentException {
+	public Rationnelv2(long numérateur, long dénominateur) throws IllegalArgumentException {
 		if(numérateur <= 0 || dénominateur == 0) {
 			throw new IllegalArgumentException("Valeurs non valide");
 		}
@@ -21,28 +21,31 @@ public class Rationnelv2 {
 		
 	}
 	
-	public int getNumérateur() {
+	public long getNumérateur() {
 		return this.numérateur;
 	}
 	
-	public int getDénominateur()  {
+	public long getDénominateur()  {
 		return this.dénominateur;
 	}
 	
 	public Rationnelv2 réduction (Rationnelv2 r) {
+		return new Rationnelv2(this.numérateur/Rationnelv2.pgcd(this.numérateur, this.dénominateur)
+				,this.dénominateur/Rationnelv2.pgcd(this.numérateur,this.dénominateur));
 		
 	}
 	
 	public Rationnelv2 somme(Rationnelv2 r) {
-		
+		return new Rationnelv2(this.numérateur*r.dénominateur + r.numérateur*this.dénominateur,
+				this.dénominateur*r.dénominateur);
 	}
 	
 	public Rationnelv2 produit(Rationnelv2 r) {
-
+		return new Rationnelv2(this.numérateur*r.numérateur,this.dénominateur*r.dénominateur);
 	}
 	
 	@Override
 	public String toString() {
-         return "test";
+         return this.numérateur + "/" + this.dénominateur;
 	}
 }
