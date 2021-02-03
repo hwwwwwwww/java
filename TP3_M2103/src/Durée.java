@@ -10,7 +10,7 @@ public class Durée {
 		}else if(minutes > 59 || minutes < 0) {
 			throw new IllegalArgumentException("m invalide");
 		}else if(secondes > 59 || secondes < 0) {
-			throw new IllegalArgumentException("s invaide");
+			throw new IllegalArgumentException("s invalide");
 		}
 		this.heures=heures;
 		this.minutes=minutes;
