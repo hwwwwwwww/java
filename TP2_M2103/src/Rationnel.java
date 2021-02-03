@@ -46,7 +46,7 @@ public class Rationnel {
 	
 	@Override
 	public String toString() {
-		Rationnel r = new Rationnel(this.numérateur,this.dénominateur).réduction();
+		Rationnel r = this.réduction();
          return r.numérateur + "/" + r.dénominateur;
 	}
 }
