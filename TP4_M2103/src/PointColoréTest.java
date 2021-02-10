@@ -4,19 +4,27 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class PointColoréTest{
+public class PointColoréTest extends PointTest{
 	
 	private PointColoré p1;
 	@Before
 	public void setUp() throws Exception {
+	super.setUp();
 	this.p1 = new PointColoré(5.0F,2.0F,45,50,60);
 	}
 
 	@After
 	public void tearDown() throws Exception {
-		this.p1=null;
+		super.tearDown();
 	}
-
+	@Test
+	public void testPointColoréAbscisse() {
+		super.testConstructeurAbscisse();
+	}
+	@Test
+	public void testPointColoréOrdonnee() {
+		super.testConstructeurOrdonnee();
+	}
 	@Test
 	public void testPointColoréOrigine() {
 		assertEquals(0.0F,0,PointColoré.POINT_ORIGINE.getAbscisse());
@@ -27,24 +35,11 @@ public class PointColoréTest{
 	}
 	@Test
 	public void testPointColoréTranslater() {
-		float tx = 1.0F;
-		float ty = 2.0F;
-		this.p1.translater(tx, ty);
-		assertEquals(6.0F,0,this.p1.getAbscisse());
-		assertEquals(4.0F,0,this.p1.getOrdonnée());
-		assertEquals(45,this.p1.getNuanceRouge());
-		assertEquals(50,this.p1.getNuanceVert());
-		assertEquals(60,this.p1.getNuanceBleu());
+		super.testTranslater();
 	}
 	@Test
 	public void testPointColoréMettreAEchelle() {
-		float h = 2.0F;
-		this.p1.mettreAEchelle(h);
-		assertEquals(10.0F,0,this.p1.getAbscisse());
-		assertEquals(4.0F,0,this.p1.getOrdonnée());
-		assertEquals(45,this.p1.getNuanceRouge());
-		assertEquals(50,this.p1.getNuanceVert());
-		assertEquals(60,this.p1.getNuanceBleu());
+		super.testMettreAEchelle();
 	}
 	@Test
 	public void testPointColoréNuanceRouge() {
@@ -100,9 +95,13 @@ public class PointColoréTest{
 	}
 	@Test (expected = IllegalArgumentException.class)
 	public void testMettreAEchelleNegatif() {
-		float h=-1.0F;
-		this.p1.mettreAEchelle(h);
+		super.testMettreAEchelleNegatif();
 	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testMettreAEchelleNegatif2() {
+		super.testMettreAEchelleNegatif2();
+	}
+	
 	
 
 }
