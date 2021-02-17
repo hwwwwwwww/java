@@ -65,4 +65,11 @@ public class TestMonome {
 		Monome m1 = new Monome(0.0F,0);
 		m.somme(m1);
 	}
+	@Test
+	public void testToString() {
+		Monome m1 = new Monome(0.0F,0);
+		assertEquals("2.0xe3",this.m.toString());
+		assertEquals("0",m1.toString());
+	}
+	
 }
