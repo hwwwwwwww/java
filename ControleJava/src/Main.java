@@ -21,7 +21,7 @@ public class Main {
 			Intervalle i3 = new Intervalle(0,0);
 			i3 = i.inter(i2);
 			System.out.println("i3 = " + i3);
-			int[]intervalle = new int[TAILLE];
+			
 		}
 		
 		
