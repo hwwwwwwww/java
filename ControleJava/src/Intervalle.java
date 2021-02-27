@@ -33,21 +33,22 @@ public class Intervalle {
 		}else {
 			return false;
 		}
+		
 	}
 	public Intervalle union(Intervalle i) throws ArithmeticException {
 		if (this.disjoint(i)){
 			throw new ArithmeticException("Les deux intervalles sont disjoints");
 		}
-		Intervalle i3 = new Intervalle(Math.min(this.borneInf, this.borneSup)
-				,Math.max(i.borneInf,i.borneSup));
+		Intervalle i3 = new Intervalle(Math.min(this.borneInf, i.borneInf)
+				,Math.max(this.borneSup,i.borneSup));
 		return i3;
 	}
 	public Intervalle inter(Intervalle i) throws ArithmeticException {
 		if (this.disjoint(i)){
 			throw new ArithmeticException("Les deux intervalles sont disjoints");
 		}
-		Intervalle i3 = new Intervalle(Math.max(this.borneInf, this.borneSup)
-				,Math.min(i.borneInf,i.borneSup));
+		Intervalle i3 = new Intervalle(Math.max(this.borneInf, i.borneInf)
+				,Math.min(this.borneSup,i.borneSup));
 		return i3;
 	}
 	@Override
