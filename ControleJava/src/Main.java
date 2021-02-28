@@ -16,8 +16,7 @@ public class Main {
 		if(i1.disjoint(i2)) {
 			System.out.println("Intervalles sont disjoints");
 		} else {
-			Intervalle i3 = new Intervalle(0,0);
-			i3 = i1.inter(i2);
+			Intervalle i3 = i1.inter(i2);
 			System.out.println("i3 = " + i3);
 			System.out.println("");
 			int TAILLE = i3.borneSup() - i3.borneInf() +1;
