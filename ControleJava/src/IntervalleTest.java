@@ -30,7 +30,7 @@ public class IntervalleTest {
         assertEquals(20, this.i1.getBorneSup());
     }
 
-    @Test 
+    @Test  
     public void testDisjoint() {
         assertTrue(i1.disjoint(new Intervalle(-10, -5)));
         assertTrue(i1.disjoint(new Intervalle(30, 40)));
