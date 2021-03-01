@@ -14,10 +14,10 @@ public class Intervalle {
 	}
 	public static final Intervalle INFINI_ZERO = new Intervalle(Integer.MIN_VALUE,0);
 	public static final Intervalle ZERO_INFINI = new Intervalle(0,Integer.MAX_VALUE);
-	public int borneInf() {
+	public int getBorneInf() {
 		return this.borneInf;
 	}
-	public int borneSup() {
+	public int getBorneSup() {
 		return this.borneSup;
 	}
 	public boolean comprend(int c) {
@@ -35,17 +35,17 @@ public class Intervalle {
 		}
 		
 	}
-	public Intervalle union(Intervalle i) throws ArithmeticException {
+	public Intervalle union(Intervalle i) throws IllegalArgumentException {
 		if (this.disjoint(i)){
-			throw new ArithmeticException("Les deux intervalles sont disjoints");
+			throw new IllegalArgumentException("Les deux intervalles sont disjoints");
 		}
 		Intervalle i3 = new Intervalle(Math.min(this.borneInf, i.borneInf)
 				,Math.max(this.borneSup,i.borneSup));
 		return i3;
 	}
-	public Intervalle inter(Intervalle i) throws ArithmeticException {
+	public Intervalle inter(Intervalle i) throws IllegalArgumentException {
 		if (this.disjoint(i)){
-			throw new ArithmeticException("Les deux intervalles sont disjoints");
+			throw new IllegalArgumentException("Les deux intervalles sont disjoints");
 		}
 		Intervalle i3 = new Intervalle(Math.max(this.borneInf, i.borneInf)
 				,Math.min(this.borneSup,i.borneSup));

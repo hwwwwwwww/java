@@ -19,10 +19,10 @@ public class Main {
 			Intervalle i3 = i1.inter(i2);
 			System.out.println("i3 = " + i3);
 			System.out.println("");
-			int TAILLE = i3.borneSup() - i3.borneInf() +1;
+			int TAILLE = i3.getBorneSup() - i3.getBorneInf() +1;
 			int [] t = new int[TAILLE] ;
 			int i = 0;
-			int image = i3.borneInf();
+			int image = i3.getBorneInf();
 			System.out.println("affichage première forme");
 			while(i<TAILLE) {	
 				t[i] = 10*image+ 5;
@@ -30,13 +30,13 @@ public class Main {
 				i++;
 				image++;
 			}
-			image = i3.borneInf();
+			image = i3.getBorneInf();
 			System.out.println();
 			System.out.println();
 			System.out.println("affichage deuxième forme");
 			for(int n = 0 ; n<TAILLE;n++) {
 				t[n] = 10*image+ 5;
-				System.out.println("f("+image+")"+ " = " + t[n]);
+				System.out.println("f("+image+") = " + t[n]);
 				image++;
 				
 			}
