@@ -96,6 +96,6 @@ public class TestPolynome {
     	p1.setMonome(new Monome(2F,3));
     	p1.setMonome(new Monome(5F,8));
     	 assertEquals("6.0xe8 + 7.0xe3 + 2.0xe2 + 3.0x",
-                p.différence(p1));
+                p.différence(p1).toString());
     }
 }

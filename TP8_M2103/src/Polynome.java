@@ -114,9 +114,9 @@ public class Polynome {
     }
     public Polynome différence(Polynome p) {
     	Polynome p1 = new Polynome();
-    	for (int i = 0;i<Polynome.DEGRE_MAX+1;i++) {
-    		Monome m = new Monome(-p.getMonome(i).getCoefficient(),p.getMonome(i).getExposant();    		
-    		p1.setMonome(this.getMonome(i).somme(p.getMonome(-i)));
+    	for (int i = 0;i<Polynome.DEGRE_MAX+1;i++) {  		
+    		p1.setMonome(this.getMonome(i).somme(new Monome(-p.getMonome(i).getCoefficient(),
+    				p.getMonome(i).getExposant())));
     	}
     	return p1;
     }
