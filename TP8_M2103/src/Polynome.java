@@ -101,6 +101,25 @@ public class Polynome {
 		}
 		return p;
     }
+    public int degré()  {
+    	int résultat = 0;
+    	for(int i = 0;i<=Polynome.DEGRE_MAX;i++) {
+    		if(this.coefficients[i]!=0) {
+    			if(résultat<i) {
+    				résultat=i;
+    			}
+    		}
+     	}
+    	return résultat;
+    }
+    public Polynome différence(Polynome p) {
+    	Polynome p1 = new Polynome();
+    	for (int i = 0;i<Polynome.DEGRE_MAX+1;i++) {
+    		Monome m = new Monome(-p.getMonome(i).getCoefficient(),p.getMonome(i).getExposant();    		
+    		p1.setMonome(this.getMonome(i).somme(p.getMonome(-i)));
+    	}
+    	return p1;
+    }
 
     @Override
     public String toString() {
