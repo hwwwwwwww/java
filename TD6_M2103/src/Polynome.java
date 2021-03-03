@@ -32,18 +32,17 @@ public class Polynome {
 		}
 		return p1;
 	}
-    public void produit(Monome m) {
+    public Polynome produit(Monome m) {
+    	Polynome p = new Polynome();
 		for(int i = 0; i<=Polynome.DEGRE_MAX;i++){
-			if(this.coefficients[i]!=0) {
-			this.coefficients[i]*=m.getCoefficient();
+			if(p.coefficients[i]!=0) {
+			p.coefficients[i]*=m.getCoefficient();
 		}
 		}
+		return p;
     }
     public void dérivée() {
     	
     }
-    @Override
-    public String toString() {
-    	return " " ;
-    }
+  
 }
