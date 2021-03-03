@@ -26,18 +26,22 @@ public class Polynome {
 	
 	public Polynome somme(Polynome p) {
 		Polynome p1 = new Polynome();
-		for(int i = 0; i<=Polynome.DEGRE_MAX;i++){
+		int i = 0;
+		while(i<Polynome.DEGRE_MAX) {
 		float somme =this.coefficients[i]+=p.coefficients[i];
 		p1.coefficients[i]=somme;
+		i++; 
 		}
 		return p1;
 	}
     public Polynome produit(Monome m) {
     	Polynome p = new Polynome();
-		for(int i = 0; i<=Polynome.DEGRE_MAX;i++){
-			if(p.coefficients[i]!=0) {
+    	int i=0;
+		while(i<Polynome.DEGRE_MAX){
+			if(p.coefficients[i]!=0.0) {
 			p.coefficients[i]*=m.getCoefficient();
 		}
+			i++;
 		}
 		return p;
     }
