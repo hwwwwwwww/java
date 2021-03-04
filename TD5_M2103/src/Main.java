@@ -10,15 +10,15 @@ public class Main {
 		int choix;
 		do {
 		System.out.println("Quel est votre choix :");
-		System.out.println("	1- modifier le premier mônome");
-		System.out.println("	2- modifier le deuxième monôme");
-		System.out.println("	3- afficher le premier monôme");
-		System.out.println("	4- afficher le deuxième monôme");
-		System.out.println("	5- calculer la somme des 2 monômes");
-		System.out.println("	6- calculer le produit des 2 monômes");
-		System.out.println("	7- calculer la dérivée du premier monôme");
-		System.out.println("	8- calculer la dérivée du deuxième monôme");
-		System.out.println("	9- quitter l'application");
+		System.out.println("\t1- modifier le premier mônome");
+		System.out.println("\t2- modifier le deuxième monôme");
+		System.out.println("\t3- afficher le premier monôme");
+		System.out.println("\t4- afficher le deuxième monôme");
+		System.out.println("\t5- calculer la somme des 2 monômes");
+		System.out.println("\t6- calculer le produit des 2 monômes");
+		System.out.println("\t7- calculer la dérivée du premier monôme");
+		System.out.println("\t8- calculer la dérivée du deuxième monôme");
+		System.out.println("\t9- quitter l'application");
 		choix = entrée.nextInt();
 		
 		switch(choix) {
