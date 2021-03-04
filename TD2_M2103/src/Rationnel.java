@@ -6,7 +6,7 @@ public class Rationnel {
 	private static int pgcd(int a,int b) {
 		while(a != b) {
 			if(a<b) {
-				b -= a;
+				b -= a; 
 			} else {
 				a -= b;
 			}

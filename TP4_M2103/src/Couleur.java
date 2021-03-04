@@ -1,6 +1,6 @@
 public class Couleur {
 	
-	private int rouge;
+	private int rouge; 
 	private int vert;
 	private int bleu;
 	

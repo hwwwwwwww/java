@@ -1,5 +1,5 @@
 import java.util.Arrays;
-
+ 
 public class MinimumTableau1 {
 
 	public static void main(String[] args) {
