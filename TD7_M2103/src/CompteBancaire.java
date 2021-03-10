@@ -23,6 +23,8 @@ public class CompteBancaire extends Compte{
 		if(c == this) {
 			return true;
 		}
+		CompteBancaire c2 = (CompteBancaire) c;
+		return this.numero == c2.numero;
 	}
 	
 }
