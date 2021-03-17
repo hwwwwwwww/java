@@ -1,12 +1,12 @@
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
-public class Banque extends CompteBancaire {
-	private List<CompteBancaire> l;
+public class Banque  {
+	private List<CompteBancaire> comptes;
 	private String libelle;
-	public Banque(String numero) {
-		super(numero);
-		this.l= new LinkedList<CompteBancaire>();
+	public Banque(String libelle) {
+		this.libelle = libelle;
+		this.comptes = new ArrayList<>();
 		
 	}
 	public String getLibelle() {
@@ -18,7 +18,7 @@ public class Banque extends CompteBancaire {
 		}
 		CompteBancaire c = new CompteBancaire(numero);
 		c.déposer(v);
-		this.l.add(c);
+		this.comptes.add(c);
 	} 
 	public void fermer(String numero) throws ArithmeticException{
 		if(!this.estCompteExistant(numero)) {
@@ -28,17 +28,17 @@ public class Banque extends CompteBancaire {
 			throw new ArithmeticException("solde non nul");
 		}
 		CompteBancaire c = new CompteBancaire(numero);
-		this.l.remove(c);
+		this.comptes.remove(c);
 	}
 	public boolean estCompteExistant(String numero) {
 		CompteBancaire c = new CompteBancaire(numero);
-		if(this.l.contains(c)) {
+		if(this.comptes.contains(c)) {
 			return true;
 		}else {
 			return false;
 		}
 	}
-	public CompteBancaire compte(String numero) {
+	public CompteBancaire getCompte(String numero) {
 		if(!this.estCompteExistant(numero)) {
 			return null;
 		} else {
@@ -47,7 +47,7 @@ public class Banque extends CompteBancaire {
 	}
 	@Override
 	public String toString() {
-		return "[Banque	; " + this.getLibelle() + " " + this.l + "]";
+		return "[Banque	; " + this.getLibelle() + " " + this.comptes + "]";
 	}
 	
 }
