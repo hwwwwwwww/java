@@ -1,5 +1,6 @@
 
 public abstract class Roboticus {
+	
 	private int taille;
 	
 	public Roboticus(int taille) {
@@ -10,4 +11,9 @@ public abstract class Roboticus {
 		return this.taille;
 	}
 	public abstract int points();
+	
+	@Override
+	public String toString() {
+		return "Roboticus [taille=" + taille + "]";
+	}
 }

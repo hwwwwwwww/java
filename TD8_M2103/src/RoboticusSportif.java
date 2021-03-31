@@ -9,12 +9,18 @@ public class RoboticusSportif extends Roboticus {
 	}
 
 	public int getNbPatte() {
-		return nbPatte;
+		return this.nbPatte;
 	}
 	
+
 	@Override
 	public int points() {
 		return this.nbPatte*this.getTaille();
+	}
+	
+	@Override
+	public String toString() {
+		return "RoboticusSportif [nbPatte=" + nbPatte + ", toString()=" + super.toString() + "]";
 	}
 
 }
