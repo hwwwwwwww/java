@@ -56,7 +56,7 @@ public class CompteBancaire extends Compte {
      */
     @Override
     public String toString() {
-        return "Numéro : " + this.getNuméro() + ", " + super.toString();
+        return "Numéro :              " + this.getNuméro() + " , " + super.toString();
     }
 
 }
