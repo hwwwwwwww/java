@@ -21,5 +21,6 @@ public class PanneauFigures extends JPanel {
             f.tracer(g);
             i++;
         }
+  
     }
 }

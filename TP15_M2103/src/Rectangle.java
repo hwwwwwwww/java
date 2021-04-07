@@ -19,7 +19,8 @@ public class Rectangle extends Figure {
 
 	@Override
 	public void tracer(Graphics g) {
-		g.drawRect(this.getPoint1().getX(), this.getPoint1().getY(), this.largeur(), this.hauteur());
+		g.drawRect(this.getPoint1().getX(), this.getPoint1().getY(),
+				this.largeur(), this.hauteur());
 		
 	}
 

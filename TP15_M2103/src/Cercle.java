@@ -17,9 +17,9 @@ public class Cercle extends Figure{
 
 	@Override
 	public void tracer(Graphics g) {
-		int x = this.getPoint1().getX();
-		int y = this.getPoint1().getY();
-		g.drawRect(x,y, this.largeur(), this.hauteur());
+		int x = this.getPoint1().getX()-this.hauteur();
+		int y = this.getPoint1().getY()-this.largeur();
+		g.drawOval(x,y, this.largeur()*2, this.hauteur()*2);
 		
 	}
 }
