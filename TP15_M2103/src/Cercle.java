@@ -20,6 +20,6 @@ public class Cercle extends Figure{
 		int x = this.getPoint1().getX()-this.hauteur();
 		int y = this.getPoint1().getY()-this.largeur();
 		g.drawOval(x,y, this.largeur()*2, this.hauteur()*2);
-		
+		 
 	}
 }
