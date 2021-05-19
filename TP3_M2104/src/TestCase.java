@@ -37,5 +37,5 @@ public class TestCase {
 		assertEquals(11,c.nouvellePosition(6));
 		assertEquals(0,c.nouvellePosition(5));
 	} 
-
+ 
 }
